@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pfl_items
   get 'pages/home'
 
   get 'pages/about'

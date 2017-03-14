@@ -1,0 +1,2 @@
+class PflItem < ApplicationRecord
+end

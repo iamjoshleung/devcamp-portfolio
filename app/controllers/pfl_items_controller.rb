@@ -1,0 +1,2 @@
+class PflItemsController < ApplicationController
+end
