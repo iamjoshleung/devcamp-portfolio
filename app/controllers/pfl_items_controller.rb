@@ -33,4 +33,8 @@ class PflItemsController < ApplicationController
       end
     end
   end
+
+  def show 
+    @portfolio_item = PflItem.find(params[:id])
+  end
 end
