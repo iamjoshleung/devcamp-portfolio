@@ -37,4 +37,13 @@ class PflItemsController < ApplicationController
   def show 
     @portfolio_item = PflItem.find(params[:id])
   end
+
+  def destroy
+    @portfolio_item = PflItem.find(params[:id])
+
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to pfl_items_url, notice: 'Record was successfully destroyed.' }
+    end
+  end
 end
