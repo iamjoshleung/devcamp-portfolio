@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  resources :pfl_items
-  get 'pages/home'
+  resources :pfl_items, except: [:show]
+  get 'portfolio/:id', to: 'pfl_items#show', as: 'portfolio_show'
 
-  get 'pages/about'
+  get 'about', to: 'pages#about'
 
-  get 'pages/contact'
+  get 'contact', to: 'pages#contact'
 
   resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  root to: 'pages#home'
 end
