@@ -10,7 +10,7 @@
 </p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Subtitle:</strong>
   <%= @portfolio_item.subtitle %>
 </p>
 
@@ -18,6 +18,12 @@
   <strong>Body:</strong>
   <%= @portfolio_item.body %>
 </p>
+
+<h2>Technologies used:</h2>
+
+<% @portfolio_item.technologies.each do |t| %>
+<p><%= t.name %></p>
+<% end %>
 
 <%= link_to 'Edit', edit_pfl_item_path(@portfolio_item) %> |
 <%= link_to 'Back', pfl_items_path %>
