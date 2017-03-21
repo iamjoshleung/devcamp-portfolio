@@ -53,4 +53,12 @@ end
   )
 end
 
-puts "9 portfolio items created"
+puts "1 portfolio items created"
+
+3.times do |techonology|
+  PflItem.last.technologies.create!(
+    name: "Technology #{techonology}"
+  )
+end
+
+puts "3 technologies created"
