@@ -1,4 +1,6 @@
 class PflItemsController < ApplicationController
+  layout "portfolio"
+
   def index
     @portfolio_items = PflItem.all
   end
