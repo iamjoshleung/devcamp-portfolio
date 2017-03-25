@@ -1,4 +1,5 @@
 class PflItemsController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
   layout "portfolio"
 
   def index
@@ -23,11 +24,9 @@ class PflItemsController < ApplicationController
   end
 
   def edit 
-    @portfolio_item = PflItem.find(params[:id])
   end
 
   def update
-    @portfolio_item = PflItem.find(params[:id])
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to pfl_items_path, notice: 'Portfolio was successfully updated.' }
@@ -38,12 +37,9 @@ class PflItemsController < ApplicationController
   end
 
   def show 
-    @portfolio_item = PflItem.find(params[:id])
   end
 
   def destroy
-    @portfolio_item = PflItem.find(params[:id])
-
     @portfolio_item.destroy
     respond_to do |format|
       format.html { redirect_to pfl_items_url, notice: 'Record was successfully destroyed.' }
@@ -58,5 +54,9 @@ class PflItemsController < ApplicationController
                                      :body, 
                                      technologies_attributes: [:name]
                                      )
+  end
+
+  def set_portfolio_item
+    @portfolio_item = PflItem.find(params[:id])
   end
 end
