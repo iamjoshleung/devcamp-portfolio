@@ -56,3 +56,4 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.2', '>= 4.2.1'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'leung_view_tool', git: 'https://github.com/joshuajazleung/leung_view_tool.git'
