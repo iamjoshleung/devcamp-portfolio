@@ -57,3 +57,4 @@ gem 'devise', '~> 4.2', '>= 4.2.1'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'leung_view_tool', '~> 0.1.0'
+gem 'petergate', '~> 1.7'
