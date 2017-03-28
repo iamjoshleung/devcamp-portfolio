@@ -6,4 +6,6 @@ class ApplicationController < ActionController::Base
   include SetSource
 
   include DefaultPageContent
+
+  include CurrentUserConcern
 end
