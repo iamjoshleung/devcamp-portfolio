@@ -4,7 +4,7 @@ class PflItemsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @portfolio_items = PflItem.all
+    @portfolio_items = PflItem.by_position
   end
 
   def new
