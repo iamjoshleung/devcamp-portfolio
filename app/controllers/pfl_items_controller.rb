@@ -7,6 +7,14 @@ class PflItemsController < ApplicationController
     @portfolio_items = PflItem.by_position
   end
 
+  def sort
+    params[:order].each do |key, value|
+      PflItem.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true
+  end
+
   def new
     @portfolio_item = PflItem.new
     3.times { @portfolio_item.technologies.build }
