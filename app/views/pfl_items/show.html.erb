@@ -29,6 +29,12 @@
       <p><%= t.name %></p>
       <% end %>
 
+      <% if logged_in?(:site_admin) %>
+      <div>
+        <%= link_to "Edit", edit_pfl_item_path(@portfolio_item), class: 'btn btn-danger' %>
+      </div>
+      <% end %>
+
     </div>
   </div>
 </div>   
