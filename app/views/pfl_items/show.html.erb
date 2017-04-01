@@ -1,8 +1,8 @@
-<div class="container pfl-item">
+<div class="container pfl-item portfolio-container">
   <div class="row">
     <div class="col-md-7">
       <p>
-        <%= image_tag @portfolio_item.thumb_image unless @portfolio_item.thumb_image.nil? %></p>
+        <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%' %>
       </p>
     </div>
     <div class="col-md-5">

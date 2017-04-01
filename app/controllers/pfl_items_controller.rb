@@ -61,6 +61,8 @@ class PflItemsController < ApplicationController
     params.require(:pfl_item).permit(:title, 
                                      :subtitle, 
                                      :body, 
+                                     :main_image,
+                                     :thumb_image,
                                      technologies_attributes: [:name]
                                      )
   end
