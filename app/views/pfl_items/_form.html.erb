@@ -39,12 +39,13 @@
 
     <ul class="form-group list-unstyled">
       <%= f.fields_for :technologies do |technology_form| %>
-        <li>
-          <%= technology_form.label :name %>
-          <%= technology_form.text_field :name, class: 'form-control' %>
-        </li>
+        <%= render 'technology_fields', f: technology_form %>
       <% end %>
     </ul>
+
+    <div>
+      <%= link_to_add_association 'add technology', f, :technologies %>
+    </div>
   </div>
 
   <div class="form-group">
