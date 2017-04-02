@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "font-awesome";
+@import "gritter";
 
 /*
  * Globals
@@ -158,6 +159,7 @@ h6, .h6 {
  */
 
 .blog-footer {
+  margin-top: 20px;
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
@@ -178,3 +180,13 @@ h6, .h6 {
   display: inline-block;
   margin-right: 0.5rem;
 }
+
+.comment-card > .card {
+  margin-top: 15px;
+}
+
+.comment-attribution {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
