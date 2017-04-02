@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   end 
   
   root to: 'pages#home'
+
+  mount ActionCable.server => '/cable'
 end
