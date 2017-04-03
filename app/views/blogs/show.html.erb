@@ -4,7 +4,7 @@
     <p><%= @blog.topic.title if @blog.topic %></p>
     <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
     <p class="blog-post-meta"><%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago by <a href="#">Mark</a></p>
-    <p><%= @blog.body %></p>
+    <p><%= markdown @blog.body %></p>
   </div>
 
   <%= render 'comments/comment_form' %>
